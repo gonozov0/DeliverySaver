@@ -1,0 +1,31 @@
+﻿@using WebApplication.Models
+@{
+    Layout = "~/Views/_Layout.cshtml";
+    ViewData["Title"] = "Работники";
+}
+@model IEnumerable<EmployeeModel>
+<div>
+    <a href="~/employee/add"> Добавить </a>
+</div>
+
+<div>
+    <table class="table">
+        <thead class="warning-color lighten-5">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ФИО</th>
+                <th scope="col">Дата рождения</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr data-href="@employee.Id">
+                    <td scope="row">@employee.Id</td>
+                    <td>@employee.FullName</td>
+                    <td>@employee.Birthday.ToShortDateString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

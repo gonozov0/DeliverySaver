@@ -1,0 +1,37 @@
+﻿@using WebApplication.Models
+@using System.Linq;
+@{
+    Layout = "~/Views/_Layout.cshtml";
+    ViewData["Title"] = "Заказы";
+}
+@model IEnumerable<OrderModel>
+
+
+
+<div>
+    <a href="~/order/add"> Добавить </a>
+</div>
+
+<div>
+    <table class="table">
+        <thead class="warning-color lighten-5">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Устройство</th>
+                <th scope="col">Работник</th>
+                <th scope="col">Продукты</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr data-href="@order.Id">
+                    <td scope="row">@order.Id</td>
+                    <td>@order.Device.MAC</td>
+                    <td>@order.Employee.FullName</td>
+                    <td>@order.Products.Select(p => p.Name).Aggregate(string.Empty, (i, j) => (i == string.Empty ? j : (i + ", " + j)))</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

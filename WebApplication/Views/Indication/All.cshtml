@@ -1,0 +1,40 @@
+﻿@using WebApplication.Models
+@using System.Linq;
+@{
+    Layout = "~/Views/_Layout.cshtml";
+    ViewData["Title"] = "Показания";
+}
+@model IEnumerable<ProductViewData>
+
+
+
+<div>
+    Работник: 
+</div>
+
+<div>
+    <table class="table">
+        <thead class="warning-color lighten-5">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Наименование продукта</th>
+                <th scope="col">Нормы влажности</th>
+                <th scope="col">Средний показатель влажности</th>
+                <th scope="col">Нормы температуры</th>
+                <th scope="col">Средний показатель температуры</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var productViewData in Model)
+            {
+                <tr class="@(productViewData.IsNorm ? "bad" : "good")">
+                    <td scope="row">@productViewData.Name</td>
+                    <td>@productViewData.HumidityBounds</td>
+                    <td>@productViewData.AverangeHumidity</td>
+                    <td>@productViewData.TemperatureBounds</td>
+                    <td>@productViewData.AverangeTemperature</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

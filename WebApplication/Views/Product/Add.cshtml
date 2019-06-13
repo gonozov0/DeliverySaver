@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Продукты";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<form method="post" action="~/product">
+    <div class="form-group">
+        <label> Наименование </label>
+        <input type="text" name="product.Name" class="form-control">
+    </div>
+    <div class="form-group">
+        <label> Нижняя граница температуры </label>
+        <input type="number" name="product.LowerTemperatureLevel" class="form-control">
+    </div>
+    <div class="form-group">
+        <label> Верхняя граница температуры </label>
+        <input type="number" name="product.UpperTemperatureLevel" class="form-control">
+    </div>
+    <div class="form-group">
+        <label> Нижняя граница влажности </label>
+        <input type="number" name="product.LowerHumidityLevel" class="form-control">
+    </div>
+    <div class="form-group">
+        <label> Верхняя граница влажности </label>
+        <input type="number" name="product.UpperHumidityLevel" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>

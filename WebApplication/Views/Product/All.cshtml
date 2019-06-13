@@ -1,0 +1,37 @@
+﻿@using WebApplication.Models
+@{
+    Layout = "~/Views/_Layout.cshtml";
+    ViewData["Title"] = "Продукты";
+}
+@model IEnumerable<ProductModel>
+<div>
+    <a href="~/product/add"> Добавить </a>
+</div>
+
+<div>
+    <table class="table">
+        <thead class="warning-color lighten-5">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Наименование</th>
+                <th scope="col">Нижний порог температуры</th>
+                <th scope="col">Верхний порог температуры</th>
+                <th scope="col">Нижний порог влажности</th>
+                <th scope="col">Верхний порог влажности</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr data-href="@product.Id">
+                    <td scope="row">@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.LowerTemperatureLevel</td>
+                    <td>@product.UpperTemperatureLevel</td>
+                    <td>@product.LowerHumidityLevel</td>
+                    <td>@product.UpperHumidityLevel</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

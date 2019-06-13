@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="~/css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="~/css/mdb.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="~/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
+        <span class="navbar-brand">DeliverySaver</span>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="~/home/index">Домой</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/employee/all">Работники</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/product/all">Продукты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/order/all">Заказы</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="maincontent">
+        @RenderBody()
+    </div>
+    <!--
+    <footer class="footer">
+        <div>
+            Copyright BWCompany,2019
+        </div>
+    </footer>
+    -->
+    <script type="text/javascript" src="~/js/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="~/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="~/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="~/js/mdb.min.js"></script>
+    <script type="text/javascript" src="~/js/script.js"></script>
+</body>
+</html>

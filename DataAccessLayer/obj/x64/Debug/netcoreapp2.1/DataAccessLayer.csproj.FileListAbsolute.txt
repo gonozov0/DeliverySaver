@@ -1,0 +1,11 @@
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\bin\x64\Debug\netcoreapp2.1\DataAccessLayer.deps.json
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\bin\x64\Debug\netcoreapp2.1\DataAccessLayer.runtimeconfig.json
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\bin\x64\Debug\netcoreapp2.1\DataAccessLayer.runtimeconfig.dev.json
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\bin\x64\Debug\netcoreapp2.1\DataAccessLayer.dll
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\bin\x64\Debug\netcoreapp2.1\DataAccessLayer.pdb
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\obj\x64\Debug\netcoreapp2.1\DataAccessLayer.csprojAssemblyReference.cache
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\obj\x64\Debug\netcoreapp2.1\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\obj\x64\Debug\netcoreapp2.1\DataAccessLayer.AssemblyInfoInputs.cache
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\obj\x64\Debug\netcoreapp2.1\DataAccessLayer.AssemblyInfo.cs
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\obj\x64\Debug\netcoreapp2.1\DataAccessLayer.dll
+E:\MyProjects\VisualStudioProjects\IOT\DeliverySaver\DeliverySaver\DataAccessLayer\obj\x64\Debug\netcoreapp2.1\DataAccessLayer.pdb

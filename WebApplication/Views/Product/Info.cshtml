@@ -1,0 +1,30 @@
+﻿@using WebApplication.Models
+@{
+    Layout = "~/Views/_Layout.cshtml";
+    ViewData["Title"] = "Продукты";
+}
+@model ProductModel
+
+<form method="post" action="~/product/@Model.Id">
+    <div class="form-group">
+        <label> Наименование </label>
+        <input type="text" name="product.Name" class="form-control" value="@Model.Name">
+    </div>
+    <div class="form-group">
+        <label> Нижняя граница температуры </label>
+        <input type="number" name="product.LowerTemperatureLevel" class="form-control" value="@Model.LowerTemperatureLevel">
+    </div>
+    <div class="form-group">
+        <label> Верхняя граница температуры </label>
+        <input type="number" name="product.UpperTemperatureLevel" class="form-control" value="@Model.UpperTemperatureLevel">
+    </div>
+    <div class="form-group">
+        <label> Нижняя граница влажности </label>
+        <input type="number" name="product.LowerHumidityLevel" class="form-control" value="@Model.LowerHumidityLevel">
+    </div>
+    <div class="form-group">
+        <label> Верхняя граница влажности </label>
+        <input type="number" name="product.UpperHumidityLevel" class="form-control" value="@Model.UpperHumidityLevel">
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>

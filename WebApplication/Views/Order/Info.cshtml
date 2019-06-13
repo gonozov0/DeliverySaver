@@ -1,0 +1,50 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@using WebApplication.Models
+@{
+    ViewData["Title"] = "Заказы";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@model OrderModel
+
+<form method="post" action="~/order/@Model.Id">
+    <div class="form-group">
+        <label> Устройство </label>
+        <select asp-items="@(new SelectList(ViewBag.Devices, "MAC", "MAC", Model.Device.MAC))" name="MAC" class="browser-default custom-select form-control"></select>
+    </div>
+    <div class="form-group">
+        <label> Работник </label>
+        <select asp-items="@(new SelectList(ViewBag.Employees, "Id", "FullName", Model.Employee.Id))" name="employeeID" class="browser-default custom-select form-control"></select>
+    </div>
+    <!--<div class="form-group">
+        <label> Продукты </label>
+        <select asp-items="@(new SelectList(ViewBag.Products, "Id", "Name"/*, Model.Products.Where(p => Model.Products.Contains(p)).Select(p => p.Id).ToList()*/))" name="productIDs" multiple class="browser-default custom-select form-control"></select>
+    </div>-->
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
+
+<div>
+    <table class="table">
+        <thead class="warning-color lighten-5">
+            <tr>
+                <th scope="col">Наименование продукта</th>
+                <th scope="col">Нормы влажности</th>
+                <th scope="col">Средний показатель влажности</th>
+                <th scope="col">Нормы температуры</th>
+                <th scope="col">Средний показатель температуры</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var productViewData in ViewBag.productViewDataList)
+            {
+                <tr class="@(productViewData.IsNorm ? "good" : "bad")">
+                    <td scope="row">@productViewData.Name</td>
+                    <td>@productViewData.HumidityBounds</td>
+                    <td>@productViewData.AverangeHumidity</td>
+                    <td>@productViewData.TemperatureBounds</td>
+                    <td>@productViewData.AverangeTemperature</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

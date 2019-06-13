@@ -1,0 +1,23 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, AuthoringTagHelpers
+@using WebApplication.Models
+@{
+    ViewData["Title"] = "Заказы";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<form method="post" action="~/order">
+    <div class="form-group">
+        <label> Устройство </label>
+        <select asp-items="@(new SelectList(ViewBag.Devices, "MAC", "MAC"))" name="MAC" class="browser-default custom-select form-control"></select>
+    </div>
+    <div class="form-group">
+        <label> Работник </label>
+        <select asp-items="@(new SelectList(ViewBag.Employees, "Id", "FullName"))" name="employeeID" class="browser-default custom-select form-control"></select>
+    </div>
+    <div class="form-group">
+        <label> Продукты </label>
+        <select asp-items="@(new SelectList(ViewBag.Products, "Id", "Name"))" name="productIDs" multiple class="browser-default custom-select form-control"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Добавить</button>
+</form>
